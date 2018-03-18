@@ -16,8 +16,10 @@ This simulates a random polymer of 100 beads.
 This simulates a block copolymer of 1000 beads.  It will run on a cpu or a gpu.  The can be changed via hoomd.context.initialize()
 
 <a href="https://github.com/fergusonml/Human-Genome-Model/blob/master/human_genome_180kb_resolution.ipynb">A Model for the Human Genome at 100kb resolution</a>
-This simulates 24 block copolymer of 1000 beads.  It will run on a cpu or a gpu.  The can be changed via hoomd.context.initialize()
+This simulates 24 block copolymer of 1000 beads.  Here each bead approximates a single contact domain (enhancer promoter loop).  It will run on a cpu or a gpu.  The can be changed via hoomd.context.initialize()
 
 <a href="https://github.com/fergusonml/Human-Genome-Model/blob/master/human_genome_10kb_resolution.ipynb">A Model for the Human Genome at 10kb resolution</a>
-This simulates 24 block copolymer of 10000 beads.  It will run only on an NVIDIA GPU.
+This simulates 24 block copolymer of 10000 beads.  Here each bead approximates a single gene.  It will run only on an NVIDIA GPU.
 
+## Acknowledgements
+I'd like to thank Joshua Anderson, University of Michigan for writing Hoomd and helpful discussions and Eric Jankowski, Boise State University.
