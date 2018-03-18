@@ -45,6 +45,9 @@ This simulates 24 block copolymers of 1000 beads each.  Here each bead approxima
 4. <a href="https://github.com/fergusonml/Human-Genome-Model/blob/master/human_genome_10kb_resolution.ipynb">A Model for the Human Genome at 10kb resolution</a>
 This simulates 24 block copolymer of 10000 beads.  Here each bead approximates a single gene.  This model will run only on an NVIDIA GPU.
 ![](snapshots/hum_gen_10kb_before.png)
+
+5. <a href="https://github.com/fergusonml/Human-Genome-Model/blob/master/human_genome_10kb_resolution%20(r2.boisestate.edu).ipynb">A Model for the Human Genome at 10kb resolution</a>
+In order to take advantage of the most powerful graphics processor we utilize the r2.boisestate.edu computing cluster with 5xP100s.
 ![](snapshots/hum_gen_10kb_after.png)
 ![](snapshots/hum_gen_10kb.png)
 
