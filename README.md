@@ -1,7 +1,14 @@
 
 # A Model for the Human Genome
 This example shows a simple simulation of 24 block copolymers that is a good model of the Human Genome in hoomd.
+
 Hoomd can be downloaded from: http://glotzerlab.engin.umich.edu/hoomd-blue/
+On Linux and MacOS type:
+>$ conda config --add channels glotzer
+>$ conda install hoomd
+
+Unfortunatly Hoomd does not currently compile or run on Windows.
+If GPU computation is required on MacOS Hoomd must be compiled from source.
 
 ![](https://upload.wikimedia.org/wikipedia/commons/6/6e/PLoSBiol3.5.Fig1bNucleus46Chromosomes.jpg)
 
