@@ -60,7 +60,7 @@ Adapted from:https://en.wikipedia.org/wiki/Chromosome
 <tr>
 <th>Chromosome</th>
 <th><a href="https://en.wikipedia.org/wiki/Gene" title="Gene">Genes</a><sup id="cite_ref-33" class="reference"><a href="#cite_note-33">[33]</a></sup></th>
-<th>Total <a href="/wiki/Nucleobase" title="Nucleobase">base pairs</a></th>
+<th>Total <a href="https://en.wikipedia.org/wiki/Nucleobase" title="Nucleobase">base pairs</a></th>
 <th>&#160;% of bases</th>
 <th>Sequenced base pairs<sup id="cite_ref-34" class="reference"><a href="#cite_note-34">[34]</a></sup></th>
 </tr>
