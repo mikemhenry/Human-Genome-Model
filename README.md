@@ -1,6 +1,6 @@
 
 # A Model for the Human Genome
-This page describes a simple copolymer hoomd simulation that is a good model of the Human Genome.
+This page describes a simple copolymer hoomd simulation that is a good model for the Human Genome.
 
 Hoomd can be downloaded from: http://glotzerlab.engin.umich.edu/hoomd-blue/
 On Linux and MacOS type:
