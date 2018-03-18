@@ -10,8 +10,11 @@ https://lost-contact.mit.edu/afs//umich.edu/user/j/o/joaander/Public/hoomd-web/d
 
 For more information on the model in this script, see "Micellar crystals in solution from molecular dynamics simulations" J. Chem. Phys. 128, 184906 (2008); DOI:10.1063/1.2913522 http://link.aip.org/link/?JCPSA6/128/184906/1
 
-<a href="https://github.com/fergusonml/Human-Genome-Model/blob/master/create%20random%20polymer.ipynb">Random Polymer Model</a>
+## Models
+
+<item><a href="https://github.com/fergusonml/Human-Genome-Model/blob/master/create%20random%20polymer.ipynb">Random Polymer Model</a>
 This simulates a random polymer of 100 beads.
+</item>
 
 <a href="https://github.com/fergusonml/Human-Genome-Model/blob/master/create%20random%20polymer2.ipynb">Random Polymer Model</a>
 This simulates a block copolymer of 1000 beads.  It will run on a cpu or a gpu.  The can be changed via hoomd.context.initialize()
@@ -23,4 +26,4 @@ This simulates 24 block copolymer of 1000 beads.  Here each bead approximates a 
 This simulates 24 block copolymer of 10000 beads.  Here each bead approximates a single gene.  It will run only on an NVIDIA GPU.
 
 ## Acknowledgements
-We'd like to thank Joshua Anderson, University of Michigan for writing Hoomd and helpful discussions and Eric Jankowski, Boise State University.
+We'd like to thank Joshua Anderson of the University of Michigan for writing Hoomd and helpful discussions and Eric Jankowski of Boise State University for help.
