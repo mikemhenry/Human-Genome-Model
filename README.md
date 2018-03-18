@@ -1,11 +1,19 @@
 
 # A Model for the Human Genome
-This example shows a simple simulation of 24 block copolymers that is a good model of the Human Genome in hoomd.
-Adapted from:https://en.wikipedia.org/wiki/Chromosome
+This page describes a simple copolymer hoomd simulation that is a good model for the Human Genome.
+
+Hoomd can be downloaded from: http://glotzerlab.engin.umich.edu/hoomd-blue/
+On Linux and MacOS type:
+>$ conda config --add channels glotzer
+>$ conda install hoomd
+
+Unfortunatly Hoomd does not currently compile or run on Windows.
+If GPU computation is required on MacOS Hoomd must be compiled from source.
 
 ![](https://upload.wikimedia.org/wikipedia/commons/6/6e/PLoSBiol3.5.Fig1bNucleus46Chromosomes.jpg)
 
 ![](https://upload.wikimedia.org/wikipedia/commons/4/4b/Chromatin_Structures.png)
+Adapted from:https://en.wikipedia.org/wiki/Chromosome
 
 The human genome consists of 24 chromosomes with a total size of 3Gb.  Aiden et al. 2014 produced a 1kB resolution Genome Contact Map(below single gene resolution).  Contact domains (∼185 kb) segregate into six nuclear subcompartments with distinct histone marks.
 
@@ -37,6 +45,9 @@ This simulates 24 block copolymers of 1000 beads each.  Here each bead approxima
 4. <a href="https://github.com/fergusonml/Human-Genome-Model/blob/master/human_genome_10kb_resolution.ipynb">A Model for the Human Genome at 10kb resolution</a>
 This simulates 24 block copolymer of 10000 beads.  Here each bead approximates a single gene.  This model will run only on an NVIDIA GPU.
 ![](snapshots/hum_gen_10kb_before.png)
+
+5. <a href="https://github.com/fergusonml/Human-Genome-Model/blob/master/human_genome_10kb_resolution%20(r2.boisestate.edu).ipynb">A Model for the Human Genome at 10kb resolution</a>
+In order to take advantage of the most powerful graphics processor we utilize the r2.boisestate.edu computing cluster with 5xP100s.
 ![](snapshots/hum_gen_10kb_after.png)
 ![](snapshots/hum_gen_10kb.png)
 
