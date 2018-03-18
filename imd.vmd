@@ -1,0 +1,4 @@
+mol load gsd random_polymer2.gsd
+set sel [atomselect top all]
+$sel set radius 0.5
+imd connect localhost 54321
