@@ -44,7 +44,7 @@ context.initialize("--mode=gpu");
 
 ## Import other libraries and define parameters
 
-The human genome has 24 chromasomes.
+The human genome has 24 chromosomes.
 
 
 ```python
