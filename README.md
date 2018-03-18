@@ -51,7 +51,7 @@ In order to take advantage of the most powerful graphics processor we utilize th
 ![](snapshots/hum_gen_10kb_after.png)
 ![](snapshots/hum_gen_10kb.png)
 
-## The final model will use more detailed information about each chromosome such as it's length, number of genes, CTCF binding sites and histone modification.
+6. The final model will use more detailed information about each chromosome such as it's length, number of genes, CTCF binding sites and histone modification.
 
 Adapted from:https://en.wikipedia.org/wiki/Chromosome
 ![](https://upload.wikimedia.org/wikipedia/commons/6/6c/Genes_and_base_pairs_on_chromosomes.svg)
