@@ -1,11 +1,12 @@
 
 # A Model for the Human Genome
 This example shows a simple simulation of 24 block copolymers that is a good model of the Human Genome in hoomd.
-Adapted from:https://en.wikipedia.org/wiki/Chromosome
+Hoomd can be downloaded from: http://glotzerlab.engin.umich.edu/hoomd-blue/
 
 ![](https://upload.wikimedia.org/wikipedia/commons/6/6e/PLoSBiol3.5.Fig1bNucleus46Chromosomes.jpg)
 
 ![](https://upload.wikimedia.org/wikipedia/commons/4/4b/Chromatin_Structures.png)
+Adapted from:https://en.wikipedia.org/wiki/Chromosome
 
 The human genome consists of 24 chromosomes with a total size of 3Gb.  Aiden et al. 2014 produced a 1kB resolution Genome Contact Map(below single gene resolution).  Contact domains (∼185 kb) segregate into six nuclear subcompartments with distinct histone marks.
 
