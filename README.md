@@ -7,6 +7,7 @@ The human genome consists of 24 chromosomes with a total size of 3Gb.  Aiden et 
 ## We begin with a random polymer model
 These models are adapted from: 
 https://lost-contact.mit.edu/afs//umich.edu/user/j/o/joaander/Public/hoomd-web/doc/page_example_scripts.html
+
 For more information on the model in this script, see "Micellar crystals in solution from molecular dynamics simulations" J. Chem. Phys. 128, 184906 (2008); DOI:10.1063/1.2913522 http://link.aip.org/link/?JCPSA6/128/184906/1
 
 <a href="https://github.com/fergusonml/Human-Genome-Model/blob/master/create%20random%20polymer.ipynb">Random Polymer Model</a>
