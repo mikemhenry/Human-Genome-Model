@@ -26,4 +26,4 @@ This simulates 24 block copolymer of 1000 beads.  Here each bead approximates a 
 This simulates 24 block copolymer of 10000 beads.  Here each bead approximates a single gene.  It will run only on an NVIDIA GPU.
 
 ## Acknowledgements
-We'd like to thank Joshua Anderson of the University of Michigan for writing Hoomd and helpful discussions and Eric Jankowski of Boise State University for help.
+We'd like to thank Joshua Anderson of the University of Michigan for writing Hoomd and helpful discussions and Eric Jankowski of Boise State University for helpful discussion.
