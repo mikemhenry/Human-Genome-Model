@@ -1,0 +1,4 @@
+mol load gsd gsd/chromosome_10000_0.gsd
+#set sel [atomselect top all]
+#$sel set radius 0
+imd connect localhost 54321
