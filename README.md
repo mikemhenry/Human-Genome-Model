@@ -4,7 +4,9 @@ This page describes a simple copolymer hoomd simulation that is a good model for
 
 Hoomd can be downloaded from: http://glotzerlab.engin.umich.edu/hoomd-blue/
 On Linux and MacOS type:
+
 >$ conda config --add channels glotzer
+
 >$ conda install hoomd
 
 Unfortunatly Hoomd does not currently compile or run on Windows.
