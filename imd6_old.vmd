@@ -1,0 +1,47 @@
+mol load gsd gsd/24xchromosomes_10000_0.gsd
+#set A [atomselect top "name A"]
+#set B [atomselect top "name B"]
+#set C [atomselect top "name C"]
+#set D [atomselect top "name D"]
+#color scale colors RGB {1.0 0.0 0.0} {0.0 1.0 0.0} {0.0 0.0 1.0}
+#color change rgb 0 1.0 0.0 0.0
+#color change rgb 1 0.0 1.0 0.0
+##color change rgb 2 0.3499999940395355 0.3499999940395355 0.3499999940395355
+#color change rgb 2 0.0 0.0 1.0
+#color change rgb 3 1.0 1.0 0.0
+#color change rgb 4 1.0 0.0 1.0
+#color change rgb 5 0.0 1.0 1.0
+#color change rgb 6 0.6000000238418579 0.6000000238418579 0.6000000238418579
+#color change rgb 7 0.0 1.0 0.0
+#color change rgb 9 1.0 0.6000000238418579 0.6000000238418579
+#color change rgb 11 0.6499999761581421 0.0 0.6499999761581421
+#color change rgb 12 0.5 0.8999999761581421 0.4000000059604645
+#color change rgb 13 0.8999999761581421 0.4000000059604645 0.699999988079071
+#color change rgb 14 0.5 0.30000001192092896 0.0
+#color change rgb 15 0.5 0.5 0.75
+#color change rgb 17 0.8799999952316284 0.9700000286102295 0.019999999552965164
+#color change rgb 18 0.550000011920929 0.8999999761581421 0.019999999552965164
+#color change rgb 19 0.0 0.8999999761581421 0.03999999910593033
+#color change rgb 20 0.0 0.8999999761581421 0.5
+#color change rgb 21 0.0 0.8799999952316284 1.0
+#color change rgb 22 0.0 0.7599999904632568 1.0
+#color change rgb 23 0.019999999552965164 0.3799999952316284 0.6700000166893005
+color scale method RGB
+#set colorcmds {
+#	{color Display {BackgroundTop} black}
+#	{color Name {B} {0}}
+#	{color Name {C} {1}}
+#	{color Name {D} {2}}
+#}
+#foreach colcmd $colorcmds {
+#	set val [catch {eval $colcmd}]
+#} 
+mol delrep 0 top
+mol representation VDW 1.000000 12.000000
+#mol color Name
+mol selection {all}
+mol material Opaque
+mol addrep top
+menu main off
+#vmdrestoremycolors
+imd connect localhost 54321

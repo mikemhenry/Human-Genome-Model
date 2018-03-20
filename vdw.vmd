@@ -1,2 +1,8 @@
-set sel [atomselect top all]
-$sel set radius 0.5
+#mol load gsd $1
+menu main off
+mol delrep 0 top
+mol representation VDW 1.000000 12.000000
+mol selection {all}
+mol material Opaque
+mol addrep top
+animate forward
