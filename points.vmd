@@ -1,9 +1,10 @@
 #mol load gsd gsd/random_polymer2.gsd
-menu main off
-color scale method RGB
 mol delrep 0 top
-mol representation VDW 1.000000 12.000000
+mol representation points
 mol selection {all}
 mol material Opaque
 mol addrep top
-imd connect localhost 54321
+color scale method RGB
+menu main off
+animate forward
+#imd connect localhost 54321
