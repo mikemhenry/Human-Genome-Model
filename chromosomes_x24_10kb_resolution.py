@@ -49,21 +49,11 @@ NChr=24 #Mb
 Nbeads=genome_size/10000
 #chromosome=np.linspace(1,Nchromosomes,Nchromosomes,dtype=intp).tolist()
 chromosome_size=np.fix(np.r_[8,7.9,6.5,6.2,5.9,5.5,5.2,4.7,4.6,4.4,4.4,4.3,3.7,3.5,3.3,2.9,2.6,2.5,2.1,2.0,1.5,1.6,5.0,1.9]/100.0*Nbeads)
-chromosome=list('bcdefghijklmnopqurstuvwxy')
-s="["+"]*%d+[".join(map(str, chromosome))+"]*%d" 
-t=chromosome_size.astype(int).tolist()
-#print t
-#type_string='['+''.join(str(e) for e in [val for pair in zip(chromosome,N*']*', chromosome_size.astype(int),N*'+[]') for val in pair])
-type_string=['']
-for i in range(NChr): type_string += "['%s']*%d" % (chromosome[i],chromosome_size[i]), 
-type_string=' + '.join(type_string)
-type_string=type_string[3:]
-print type_string
-#separation_radius=dict(b=0.35, c=0.35)
-separation_radius='=0.35, '.join(chromosome) 
-print ('%s=0.35' % (separation_radius))
-#print dict(b=0.35, c=0.35, d=0.35, e=0.35, f=0.35, g=0.35, h=0.35, i=0.35, j=0.35, k=0.35, l=0.35, m=0.35, n=0.35, o=0.35, p=0.35, q=0.35, u=0.35, r=0.35, s=0.35, t=0.35)
-#print dict(u=0.35, v=0.35, w=0.35, x=0.35, y=0.35)
+chromosome=list('cdefghijklmnopqurstuvwxy')
+separation_radius='=0.35, '.join(chromosome[:NChr])+'=0.35'
+print separation_radius
+separation_radius=dict(c=0.35, d=0.35, e=0.35, f=0.35, g=0.35, h=0.35, i=0.35, j=0.35, k=0.35, l=0.35, m=0.35, n=0.35, o=0.35, p=0.35, q=0.35, u=0.35, r=0.35, s=0.35, t=0.35)
+separation_radius.update(dict(u=0.35, v=0.35, w=0.35, x=0.35, y=0.35))
 
 
 # So if we assume that Euchromatin makes up 60% of the genome and heterochromatin makes up 40% then a block copolymer of 10000 beads would have a resolution of approximately 13 kb/bead the average size of a human gene.  This would correspond to approximately 18 beads per enhancer promoter loop.
@@ -71,20 +61,17 @@ print ('%s=0.35' % (separation_radius))
 # In[ ]:
 
 
-type_string=['b']*24638 + ['c']*24330 + ['d']*20018 + ['e']*19095 + ['f']*18171 + ['g']*16939 + ['h']*16015 + ['i']*14475 + ['j']*14167 + ['k']*13551 + ['l']*13551 + ['m']*13243 + ['n']*11395 + ['o']*10779 + ['p']*10163 + ['q']*8931 + ['u']*8007 + ['r']*7699 + ['s']*6467 + ['t']*6159 + ['u']*4619 + ['v']*4927 + ['w']*15399 + ['x']*5851
 #polymer1 = dict(bond_len=1.2, type=['A']*3000 + ['B']*4000 + ['A']*3000,bond="linear", count=n_poly)
-polymer1 = dict(bond_len=1.2, type=type_string,bond="linear", count=n_poly)
-#polymer1 = dict(bond_len=1.2, type=['B']*300,bond="linear", count=n_poly)
-#polymer2 = dict(bond_len=1.2, type=['C']*400,bond="linear", count=n_poly)
-#polymer3 = dict(bond_len=1.2, type=['D']*300,bond="linear", count=n_poly)
+polymer = [[] for i in range(NChr)]
+for i in range(NChr): polymer[i] = dict(bond_len=1.2, type=chromosome[i]*int(chromosome_size[i]),bond="linear", count=1)
 # perform some simple math to find the length of the box
-N = len(polymer1['type']) * polymer1['count']#+len(polymer2['type']) * polymer2['count']+len(polymer3['type']) * polymer3['count']
+#N = len(polymer1['type']) * polymer1['count']#+len(polymer2['type']) * polymer2['count']+len(polymer3['type']) * polymer3['count']
+N=0
+for i in range (NChr): N += len(polymer[i]['type']) * polymer[i]['count']#+len(polymer2['type']) * polymer2['count']+len(polymer3['type']) * polymer3['count']
+
 # generate the polymer system
-separation_radius=dict(b=0.35, c=0.35, d=0.35, e=0.35, f=0.35, g=0.35, h=0.35, i=0.35, j=0.35, k=0.35, l=0.35, m=0.35, n=0.35, o=0.35, p=0.35, q=0.35, u=0.35, r=0.35, s=0.35, t=0.35)
-separation_radius.update(dict(u=0.35, v=0.35, w=0.35, x=0.35, y=0.35))
-#separation_radius=dict(B=0.35, C=0.35, D=0.35)
 #init.create_random_polymers(box=data.boxdim(volume=10*math.pi * N / (6.0 * phi_P)), polymers=[polymer1,polymer2,polymer3],separation=separation_radius,seed=12)
-init.create_random_polymers(box=data.boxdim(volume=10*math.pi * N / (6.0 * phi_P)), polymers=[polymer1],separation=separation_radius,seed=12)
+init.create_random_polymers(box=data.boxdim(volume=5*math.pi * N / (6.0 * phi_P)), polymers=polymer,separation=separation_radius,seed=12)
 
 
 # ## Setup the bonds and force fields
@@ -154,8 +141,48 @@ run(1e5)
 # In[ ]:
 
 
-#!cat imd.vmd
-#vmd -e imd.vmd gsd/24xchromosomes_10000_0.gsd
+#!cat points.vmd
+#vmd -e points.vmd gsd/24xchromosomes_10000.gsd
 
+
+# ## GPU cluster
+# We happen to have a high performance computing cluster on campus with 5 NVIDIA P100 GPU's.  In order to take advantage of them we need simply need to have an account and to have a little extra knowledge about how to use an HPC cluster.
+# 
+# R2 is a heterogeneous compute cluster provided by the BSU Office of Research. It consists of 26 compute nodes and 5 GPU nodes, each with dual Intel Xeon E5-2680 CPUs. The GPU nodes each have dual Nvidia P100 GPUs.  More information about the cluster, how to gain access to it and how to use it can be found here: https://rcs.boisestate.edu/r2/
+# 
+# While it is probably possible to use an ipython notebook on a server (see fast.ai for an example).  We will reduce our python code to a script shown below.
 
 # ![](snapshots/24xchromosomes_10k.png)
+
+# In[4]:
+
+
+get_ipython().system(u'cat chromosomes_x24_10kb_resolution.py')
+
+
+# ## SLURM and how to run jobs
+# In addition to the python script we need also to have shell script that identifies how many and which nodes to use.  More information about the SLURM scheduler and how to use it can be found here: https://slurm.schedmd.com/quickstart.html
+# and here: 
+# https://www.rc.fas.harvard.edu/resources/documentation/convenient-slurm-commands/
+# 
+# Some useful commands are:
+# sinfo
+# squeue
+# scancel
+# 
+# to start our job type:
+# >sbatch hum_gen.bash
+# 
+# progress can be followed by typing 
+# >cat logs/gpu-job-*.o
+
+# In[3]:
+
+
+
+
+
+# Then copy the output from the scratch folder on R2 using secure copy (scp):
+# >scp mferguson@r2.boisestate.edu:scratch/24xchromosomes_10000.gsd ./gsd/
+
+# ![](snapshots/24xchromosomes_10000.png)
