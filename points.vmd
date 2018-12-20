@@ -1,6 +1,6 @@
 #mol load gsd gsd/random_polymer2.gsd
 mol delrep 0 top
-mol representation points
+mol representation points 2.0
 mol selection {all}
 mol material Opaque
 mol addrep top
