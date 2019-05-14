@@ -84,8 +84,8 @@ run(1e6)
 
 # ## Plot results and correlation function
 from matplotlib import pyplot
-get_ipython().magic(u'matplotlib inline')
-get_ipython().system(u'head ree.log')
+#get_ipython().magic(u'matplotlib inline')
+#get_ipython().system(u'head ree.log')
 data = numpy.genfromtxt(fname='ree.log',skip_header=True);
 t=numpy.ndarray.flatten(data[:,0])
 r_ee=data[:,1:]#/(101*(0.84**2))
