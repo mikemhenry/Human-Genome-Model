@@ -5,7 +5,7 @@ This page describes a simple copolymer hoomd simulation that is a good model for
 Hoomd can be downloaded from: http://glotzerlab.engin.umich.edu/hoomd-blue/
 On Linux and MacOS type:
 
->$ conda config --add channels glotzer
+>$ conda config --add channels conda-forge
 
 >$ conda install hoomd
 
